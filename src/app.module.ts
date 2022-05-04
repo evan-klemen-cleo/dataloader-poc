@@ -11,9 +11,6 @@ import { PostsModule } from './posts/posts.module';
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
-      context: () => ({
-        dl: Math.random(),
-      }),
     }),
     UsersModule,
     PostsModule,
